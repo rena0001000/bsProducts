@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/*-------------------------
+  初期値
+-------------------------*/
+/* 練習4-3 ：body⇒内側の上余白100px */
+body {
+/* 練習3-7③ : プレビューすると余白のバランスが悪いため、上の余白を詰めて下を開ける。内側の上余白73pxに編集。 ※ここのPCに合うよう設定必要あり */
+padding-top: 75px;
+}
+/* 練習4-3 ：セレクタ.topics p⇒プロパティ横揃え・両端揃え text-align: justify;とは、均等割付=両端ぞろえ */
+.topics p {
+  text-align: justify;
+}
+
+/* 練習3-5① ：ボタン２つ作成（色⁺線+ホバーアニメーションを追加。）
+HTMLへ記載する展開コード⇒ a[href=#].btn.btn-primary{詳細}+a[href=#].btn.btn-warning{公式} */
+.btn-primary {
+background-color: #8e44ed;
+border: 1px solid #8e44ed;
+}
+.btn-primary:hover {
+background-color: #7e349d;
+border: 1px solid #7e349d;
+}
+
+
+
+/*-------------------------
+  トップ
+-------------------------*/
+/* 練習3-5② ： ボタンの「高さを揃え」他と「文章と行数」を合わせるコード */
+.topics p {
+display: -webkit-box;
+overflow: hidden;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 8; /* 表示行数を指定する */
+}

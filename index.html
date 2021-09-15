@@ -1,0 +1,126 @@
+<!--  練習問題.03-7⑤～まだ -->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Title</title>
+        <meta name="description" content="Title">
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<!-- !+で展開後に、cdnを追加 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+<!-- 練習3-2 ：navbar-expand-lg(背景となる親要素の左右幅を目一杯に広げる) navbar-dark(文字色-明るく) bg-dark(背景-暗く) fixed-top(スクロール時、上に固定) -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+<!-- 練習3-2 ：h1要素、logo.pngを追加 ⇒HPは、ヘッダーとロゴ画像が左上に出た状態。-->
+                <h1><a class="navbar-brand" href="#"><img src="images/logo.png" alt="BootstrapTest Logo"></a></h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">AboutUs</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Products
+              </a>
+                            <ul class="dropdown-menu" labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+<!-- 練習3-7①・② ：カルーセル(Carousel)コピペを追加。 -->
+<!-- 練習3-7③ ：クラスにmb-5を追加。 -->
+        <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+<!-- 練習3-7④ ：キービジュアル画像の高さが狭いので、img要素に高さ100%(h-100)を追加。 -->
+                    <img src="images/main1.jpg" class="d-block w-100 h-100" alt="main1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/main2.jpg" class="d-block w-100 h-100" alt="main2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/main3.jpg" class="d-block w-100 h-100" alt="main3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+<!-- ↑カルーセル、ここまで -->
+
+
+<!-- 練習3-4 ：section要素を作成し「containerとtopics」クラス追加
+section.container.topics>.row>.col-lg-4.col-xs-12*3>h2{見出し}+p>lorem50 -->
+        <section class="container topics">
+            <div class="row">
+<!-- 練習3-4 ：ノートパソコン以上表示、横並び3列。スマホ以上の表示、100%幅の縦列でdiv要素を表示。 -->
+<!-- 練習3-5④ ：外側の下余白mb-5を追加 ×３。 -->
+                <div class="col-lg-4 col-xs-12 mb-5">
+<!-- 練習3-4 ：見出しh2要素で文字内容は「見出し」と段落を追加。内容は「lorem」50単語分の文章を生成。 -->
+<!-- 練習3-6① ：img1〜3.jpgを追加 ×３
+img[src=images/img.jpg].img-thumbnail.rounded-circle.d-block.mx-auto -->
+                    <img src="images/img1.jpg" alt="" class="img-thumbnail rounded-circle d-block mx-auto">
+                    <h2>見出し</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, excepturi quibusdam? Ad, hic debitis doloremque voluptatem laboriosam culpa a ab quisquam! Distinctio iure ipsa eius sunt exercitationem tenetur maxime, consectetur delectus quam accusantium tempora labore. Fuga officiis repellat culpa aut dolore quod deserunt ullam natus non quis, ea sapiente quidem.</p>
+<!-- /* 練習3-5①・③ ：ボタン２つ作成 ×３、詳さいクラスにmr-2追加。
+a[href=#].btn.btn-primary{詳細}+a[href=#].btn.btn-warning{公式} */ -->
+                    <a href="#" class="btn btn-primary mr-2">詳細</a><a href="#" class="btn btn-warning">公式</a>
+                </div>
+                <div class="col-lg-4 col-xs-12 mb-5">
+                    <img src="images/img2.jpg" alt="" class="img-thumbnail rounded-circle d-block mx-auto">
+                    <h2>見出し</h2>
+                    <p>Iure placeat quod incidunt possimus non id nesciunt repudiandae ex nobis tempora voluptatibus quisquam, aliquam fugit aspernatur odit sint debitis quas pariatur culpa? Debitis mollitia expedita iusto iste aperiam tempore amet, sed fugiat pariatur cum minima, repudiandae neque. Unde molestiae ipsam quod praesentium dolores adipisci, pariatur asperiores harum accusantium recusandae!</p>
+                    <a href="#" class="btn btn-primary mr-2">詳細</a><a href="#" class="btn btn-warning">公式</a>
+                </div>
+                <div class="col-lg-4 col-xs-12 mb-5">
+                    <img src="images/img3.jpg" alt="" class="img-thumbnail rounded-circle d-block mx-auto">
+                    <h2>見出し</h2>
+                    <p>At ad voluptates laboriosam hic, corrupti harum cupiditate! Eum eos voluptates eveniet qui laborum et minus impedit hic totam molestias cumque ullam recusandae temporibus, unde vel odio adipisci alias magni exercitationem iusto optio sunt tenetur praesentium! Eligendi possimus quidem rerum maiores at nulla repudiandae blanditiis quos placeat. Tenetur, dolor quo!</p>
+                    <a href="#" class="btn btn-primary mr-2">詳細</a><a href="#" class="btn btn-warning">公式</a>
+                </div>
+            </div>
+        </section>
+<!-- 練習3-6② ：section要素を作成し「containerとbanner」クラス追加。
+section.container.banner>.row>.col-lg-3.col-xs-12*4>img[src=images/img.jpg][alt=バナー].img-thumbnail.rounded.w-100.mb-4 -->
+        <section class="container banner">
+            <div class="row">
+                <div class="col-lg-3 col-xs-12"><img src="images/img4.jpg" alt="バナー" class="img-thumbnail rounded w-100 mb-4"></div>
+                <div class="col-lg-3 col-xs-12"><img src="images/img5.jpg" alt="バナー" class="img-thumbnail rounded w-100 mb-4"></div>
+                <div class="col-lg-3 col-xs-12"><img src="images/img6.jpg" alt="バナー" class="img-thumbnail rounded w-100 mb-4"></div>
+                <div class="col-lg-3 col-xs-12"><img src="images/img7.jpg" alt="バナー" class="img-thumbnail rounded w-100 mb-4"></div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
